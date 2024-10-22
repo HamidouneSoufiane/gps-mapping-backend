@@ -1,20 +1,19 @@
 package org.store.gpsmapping.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Entity
-@Data
+@Data@Table(name = "arch_1004901")
 public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private Double latitude;
-    private Double longitude;
-    private String information;
+    Date date;
+    int id_device;
+    double latitude;
+    double longitude;
 }
